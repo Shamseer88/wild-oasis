@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useQuery } from "@tanstack/react-query";
-import getCabins from "../../services/apiCabins";
+import { getCabins } from "../../services/apiCabins";
 import Spinner from "../../ui/Spinner";
 import CabinRow from "./CabinRow";
 
@@ -34,7 +34,7 @@ const CabinTable = () => {
     data: cabins,
     error,
   } = useQuery({
-    queryKey: ["cabin"],
+    queryKey: ["cabins"],
     queryFn: getCabins,
   });
 
